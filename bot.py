@@ -6,7 +6,7 @@ class Bot(commands.Bot):
     
     def __init__(self):
         self.alerts = []
-        self.delay = 60
+        self.delay = 30
         super().__init__(command_prefix="$", intents=discord.Intents.all()) # TODO: specify some intents mais la g la flemme
      
         
