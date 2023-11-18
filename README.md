@@ -8,9 +8,15 @@ Il utilise les catégories de recherches suivantes: Livre (TOUS) et Le plus réc
 
 ## Installation
 
-1. Éxécutez la commande `python3 setup.py`
-2. Pour activer l'environement virtuel -> Win10: `start.bat` OU Unix: `./start`
-3. Installez les librairies requises: `pip3 install -r requirements.txt`
+Windows10:
+1. Créer un environment virtuel: `python3 -m venv .venv`
+2. Activez le: `.venv\Scripts\activate`
+3. Installez les libraires: `pip3 install -r requirements.txt`
+
+Unix:
+1. `python3 -m venv .venv`
+2. `source .venv/bin/activate`
+3. `pip3 install -r requirements.txt` 
 
 ## Configuration
 
