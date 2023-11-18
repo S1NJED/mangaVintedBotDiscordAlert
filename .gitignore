@@ -1,0 +1,6 @@
+__pycache__
+.venv
+vinted_notifier/__pycache__
+*.json
+test*
+activate.bat
