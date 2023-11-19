@@ -94,7 +94,6 @@ class UtilsVintedNotifier:
         item = {
             article_id: {
                 'title': data['title'],
-                'description': data['description'],
                 'item_photo': data['photos'][0]['url'],
                 
                 'price': data['price']['amount'],

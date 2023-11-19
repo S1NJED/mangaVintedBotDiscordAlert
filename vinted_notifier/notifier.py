@@ -50,7 +50,7 @@ class VintedNotifier(UtilsVintedNotifier):
             try:
                 text = self.search_text.lower()
                 
-                if text in current_item['title'].lower() or text in current_item['description'].lower():
+                if text in current_item['title'].lower():
 
                     # To get only article from your country
                     if self.country_code and current_item['user']['country_code'] != self.country_code:
