@@ -1,6 +1,7 @@
 import requests, logging, os, discord
 from vinted_notifier.utils import UtilsVintedNotifier
 from discord.ext.commands import Bot
+from time import sleep
 
 filename = "error.log"
 logging.basicConfig(filename=os.path.join(os.getcwd(), filename), level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -59,6 +60,8 @@ class VintedNotifier(UtilsVintedNotifier):
 
             except Exception as err:
                 logging.error(err)
+            
+            sleep(3.5)
             
         self.ITEMS = NEWEST_ITEMS
     
