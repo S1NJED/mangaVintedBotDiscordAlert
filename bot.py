@@ -41,7 +41,7 @@ class Bot(commands.Bot):
         alert: VintedNotifier
         for alert in self.alerts:
             await alert.checkNewestItems()
-            await asyncio.sleep(3)
+            await asyncio.sleep(4)
             
 
     @checkingStock.before_loop
