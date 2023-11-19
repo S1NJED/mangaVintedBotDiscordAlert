@@ -43,7 +43,11 @@ class UtilsVintedNotifier:
         URL = self.createUrl()
         req = self.session.get(URL)
         data = req.json()
-        
+        try:
+            data['items']
+        except:
+            sleep(20) # sleep in case we can't get data (rate limited)
+            return self.getNewestItems()
         
         NEWEST_ITEMS = []
         
@@ -82,13 +86,10 @@ class UtilsVintedNotifier:
         
         # 429: Too Many Requests -> recursivity until code 200
         if req.status_code == 429:
-            sleep(3)
+            sleep(21)
             return self.getItemData(article_id)
         
         data = req.json()['item']
-        
-        with open('bruger.json', 'w') as file:
-            json.dump(data, file)
         
         item = {
             article_id: {
