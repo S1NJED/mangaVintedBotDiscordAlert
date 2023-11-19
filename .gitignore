@@ -4,3 +4,4 @@ vinted_notifier/__pycache__
 *.json
 test*
 activate.bat
+*.db
